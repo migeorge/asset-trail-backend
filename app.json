@@ -1,0 +1,17 @@
+{
+  "name": "Asset Trail Backend",
+  "description": "The backend api that controls data for the Asset Trail app",
+  "website": "https://github.com/migeorge/asset-trail-backend",
+  "success_url": "/",
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "env": {
+    "RAILS_ENV": "Production",
+    "SECRET_KEY_BASE": {
+      "description": "Rails secret key base generator",
+      "generator": "secret"
+    }
+  },
+  "scripts": {
+    "postDeploy": "bundle exec rails db:migrate"
+  }
+}
